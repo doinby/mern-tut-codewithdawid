@@ -2,14 +2,24 @@
 @tailwind components;
 @tailwind utilities;
 
-* {
-   outline: 1px solid magenta;
+@layer base {
+	* {
+		@apply outline outline-lime-500 outline-0;
+	}
+
+	html,
+	body,
+	#root {
+		@apply h-full;
+	}
+
+	#root {
+		@apply flex flex-col;
+	}
 }
 
-html {
-   height: 100%;
-}
-
-body, #root {
-   height: inherit;
+@layer components {
+	main {
+		@apply grow shrink-0 basis-auto container mx-auto;
+	}
 }

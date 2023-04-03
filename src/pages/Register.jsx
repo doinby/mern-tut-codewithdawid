@@ -16,23 +16,25 @@ export default function Register() {
 	}
 
 	return (
-		<form
-			onSubmit={handleSubmit(onSubmit)}
-			className='self-center justify-self-center flex flex-col gap-6'>
-			<input
-				type='email'
-				placeholder='Email'
-				{...register('email', { required: true })}
-			/>
-			<input
-				type='password'
-				placeholder='Password'
-				{...register('password', { required: true })}
-			/>
+		<main className='flex flex-col justify-center'>
+			<form
+				onSubmit={handleSubmit(onSubmit)}
+				className='self-center flex flex-col gap-6'>
+				<input
+					type='email'
+					placeholder='Email'
+					{...register('email', { required: true })}
+				/>
+				<input
+					type='password'
+					placeholder='Password'
+					{...register('password', { required: true })}
+				/>
 
-			<button type='submit' className='text-white bg-green-600'>
-				Submit
-			</button>
-		</form>
+				<button type='submit' className='text-white bg-green-600'>
+					Submit
+				</button>
+			</form>
+		</main>
 	);
 }
